@@ -31,23 +31,37 @@ public class StudentTest {
 		Student secondStudent = new Student("x", "Y", 3);
 		
 		int actual = secondStudent.compareTo(firstStudent);
-		int expected = 1;
 		
-		assertEquals(expected, actual);
+		// Should be bigger
+		boolean result = false;
+		if(actual > 0) 
+			result = true;
+		
+				
+		assertTrue(result);
 		
 		Student student = new Student("x", "Y", 5);
 		
-		expected = -1;
+		
 		actual = secondStudent.compareTo(student);
+		
+		result = false;
+		// Should be less than 0
+		if(actual < 0) 
+			result = true;
+		
+		assertTrue(result);
+		
+		
+		// Should be the same, therefore would be 0
+		Student studentSame = new Student("x", "y", 5);
+		
+		actual = student.compareTo(studentSame);
+		int expected = 0;
 		assertEquals(expected, actual);
-
-
-		
-		
-		
-
-
 	}
+	
+	
 	
 	@Test
 	public void testGet() throws NameException {
