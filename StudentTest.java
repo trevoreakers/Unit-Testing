@@ -40,8 +40,13 @@ public class StudentTest {
 				
 		assertTrue(result);
 		
-		Student student = new Student("x", "Y", 5);
+		Student student = new Student("A", "A", 5);
+		Student empty = new Student("z", "", 3);
+		Student secondEmpty = new Student("x", "", 3);
 		
+		CompareLastFirstName clfn = new CompareLastFirstName();
+		
+		clfn.compare(firstStudent, secondStudent);
 		
 		actual = secondStudent.compareTo(student);
 		
