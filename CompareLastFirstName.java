@@ -2,7 +2,7 @@ import java.util.Comparator;
 
 public class CompareLastFirstName implements Comparator<Student> {
 	
-	public int Compare(Student first, Student last) {
+	public int compare(Student first, Student last) {
 		String firstName = first.getFirstName();
 		String lastName = first.getLastName();
 		String firstNameLast = last.getFirstName();
@@ -22,4 +22,6 @@ public class CompareLastFirstName implements Comparator<Student> {
 			return -1;
 		}
 	}
+
+	
 } 
