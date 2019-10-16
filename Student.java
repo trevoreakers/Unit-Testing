@@ -39,6 +39,13 @@ public class Student extends Person implements Comparable<Student>{
 		
 		return new Integer(rating);
 	}
+
+
+
+
+
+
+
 	
 
 }
